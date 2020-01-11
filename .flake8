@@ -1,0 +1,16 @@
+[flake8]
+doctests = True
+
+# Use the black line length:
+max-line-length = 88
+
+extend-ignore =
+    # See https://github.com/PyCQA/pycodestyle/issues/373
+    # flake8/pycodechecker give false positives on black code
+    E203,
+
+# =====================
+# flake-quote settings:
+# =====================
+# Set this to match black style:
+inline-quotes = double

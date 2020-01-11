@@ -3,7 +3,7 @@ flake8-sfs - Python String Formatting Style Plugin
 
 .. image:: https://img.shields.io/pypi/v/flake8-sfs.svg
    :alt: Released on the Python Package Index (PyPI)
-   :target: https://pypi.python.org/pypi/flake8-sfs
+   :target: https://pypi.org/project/flake8-sfs/
 .. image:: https://img.shields.io/conda/vn/conda-forge/flake8-sfs.svg
    :alt: Released on Conda
    :target: https://anaconda.org/conda-forge/flake8-sfs
@@ -21,9 +21,8 @@ Introduction
 ------------
 
 This is an MIT licensed flake8 plugin for enforcing a Python string formatting
-preference. It is available to install from the Python Package Index (PyPI):
-
-- https://pypi.python.org/pypi/flake8-sfs
+preference. It is available to install from the `Python Package Index (PyPI)
+<https://pypi.org/project/flake8-sfs/>`_.
 
 For historical reasons, the Python programming language has accumlated multiple
 ways to do string formatting. The three main ones are:

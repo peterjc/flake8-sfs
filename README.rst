@@ -58,8 +58,11 @@ For example, if you accept that f-strings are best, you could run a tool like
 code - and then use this flake8 plugin to enforce the style.
 
 Alternatively, you might have a large legacy codebase with lots of the percent
-formatting - yet want to gradually move to f-strings. Here you coudl use this
+formatting - yet want to gradually move to f-strings. Here you could use this
 plugin to enforce a rule allowing those but rejecting the string format method.
+
+Or you might the the old ways are the best, and configure flake8 to ignore the
+percent formatting but treat either the format method or f-strings as errors.
 
 By default this plugin complains about all three styles - we expect you to make
 an explicit choice and configure which codes to ignore.

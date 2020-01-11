@@ -1,0 +1,3 @@
+# This is a plugin for flake8, so we require that.
+# Our prefixes are not single letter, so we need v3:
+flake8 >= 3.0.0

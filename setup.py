@@ -16,7 +16,7 @@ def get_version(fname="flake8_sfs.py"):
 setup(
     name="flake8-sfs",
     version=get_version(),
-    description="Python docstring reStructuredText (RST) validator",
+    description="Python String Formatting Style (SFS) plugin for flake8",
     long_description=open("README.rst").read(),
     license="MIT",
     author="Peter J. A. Cock",

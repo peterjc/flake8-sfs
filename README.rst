@@ -74,13 +74,29 @@ codes, which became problematic with collisions in the plugin ecosystem. Since
 v3.0, flake8 has supported longer prefixes therefore this plugin uses ``SFS``
 as its prefix (short for String Format Style).
 
+Prefix ``SFS1`` - percent operator:
+
 ====== =======================================================================
 Code   Description
 ------ -----------------------------------------------------------------------
 SFS101 String literal formatting using percent operator.
 SFS102 Bytes literal formatting using percent operator.
+====== =======================================================================
+
+Prefix ``SFS2`` - format method:
+
+====== =======================================================================
+Code   Description
+------ -----------------------------------------------------------------------
 SFS201 String literal formatting using .format method.
 SFS202 String formatting with str.format('...', ...) directly.
+====== =======================================================================
+
+Prefix ``SFS3`` - f-strings:
+
+====== =======================================================================
+Code   Description
+------ -----------------------------------------------------------------------
 SFS301 String literal formatting using f-string.
 ====== =======================================================================
 

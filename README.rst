@@ -27,21 +27,21 @@ preference. It is available to install from the `Python Package Index (PyPI)
 For historical reasons, the Python programming language has accumlated multiple
 ways to do string formatting. The three main ones are:
 
-* Percent operator, as in this example:
+* Percent operator (violation codes ``SFS1##``), as in this example:
 
     >>> name = "Peter"
     >>> price = 1.2
     >>> print("Hello %s, do you have $%0.2f?" % (name, price))
     Hello Peter, do you have $1.20?
 
-* Format method, available since Python 2.6,
+* Format method (violation codes ``SFS2##``), available since Python 2.6,
 
     >>> name = "Peter"
     >>> price = 1.2
     >>> print("Hello {}, do you have ${:0.2f}?".format(name, price))
     Hello Peter, do you have $1.20?
 
-* f-strings, available since Python 3.6,
+* f-strings (violation codes ``SFS3##``), available since Python 3.6,
 
     >>> name = "Peter"
     >>> price = 1.2
@@ -77,12 +77,15 @@ as its prefix (short for String Format Style).
 ====== =======================================================================
 Code   Description
 ------ -----------------------------------------------------------------------
-SFS100 Bytes literal formatting using percent operator.
 SFS101 String literal formatting using percent operator.
-SFS102 String literal formatting using .format method.
-SFS103 String literal formatting using f-string.
-SFS104 String formatting with str.format('...', ...) directly.
+SFS102 Bytes literal formatting using percent operator.
+SFS201 String literal formatting using .format method.
+SFS202 String formatting with str.format('...', ...) directly.
+SFS301 String literal formatting using f-string.
 ====== =======================================================================
+
+You can use a partial code like ``SFS1`` in flake8 to ignore all the ``SFS1##``
+percent formatting codes.
 
 
 Installation and usage
@@ -139,7 +142,7 @@ Version History
 ======= ========== ===========================================================
 Version Released   Changes
 ------- ---------- -----------------------------------------------------------
-v0.0.2  2020-01-12 - Added ``SFS104`` for using ``str.format("...", ...)``.
+v0.0.2  2020-01-12 - Codes have a heirachy; ``str.format("...", ...)`` check.
 v0.0.1  2020-01-11 - Initial public release.
 ======= ========== ===========================================================
 

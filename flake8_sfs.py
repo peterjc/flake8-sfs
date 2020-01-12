@@ -73,11 +73,11 @@ class StringFormatStyleChecker:
 
         # Avoid duplicate messages
         for msg_str, msg_values in (
-            ("100 Bytes literal formatting using percent operator.", percent_bytes),
             ("101 String literal formatting using percent operator.", percent_strings),
-            ("102 String literal formatting using format method.", format_method),
-            ("103 String literal formatting using f-string.", f_strings),
-            ("104 String formatting with str.format('...', ...) directly.", str_format),
+            ("102 Bytes literal formatting using percent operator.", percent_bytes),
+            ("201 String literal formatting using format method.", format_method),
+            ("202 String formatting with str.format('...', ...) directly.", str_format),
+            ("301 String literal formatting using f-string.", f_strings),
         ):
             for line, col in sorted(msg_values):
                 yield (line, col, plugin_prefix + msg_str, type(self))

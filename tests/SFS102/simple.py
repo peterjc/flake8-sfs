@@ -1,5 +1,6 @@
-"""Example using string format method."""
+"""Example using percent formatting with bytes."""
 
-name = "Peter"
+name = b"Peter"
 price = 1.2
-print("Hello {}, do you have ${:0.2f}?".format(name, price))
+message = b"Hello %s, do you have $%0.2f?" % (name, price)
+print(message.decode("ascii"))

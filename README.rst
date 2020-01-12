@@ -81,6 +81,7 @@ SFS100 Bytes literal formatting using percent operator.
 SFS101 String literal formatting using percent operator.
 SFS102 String literal formatting using .format method.
 SFS103 String literal formatting using f-string.
+SFS104 String formatting with str.format('...', ...) directly.
 ====== =======================================================================
 
 
@@ -138,6 +139,7 @@ Version History
 ======= ========== ===========================================================
 Version Released   Changes
 ------- ---------- -----------------------------------------------------------
+v0.0.2  2020-01-12 - Added ``SFS104`` for using ``str.format("...", ...)``.
 v0.0.1  2020-01-11 - Initial public release.
 ======= ========== ===========================================================
 

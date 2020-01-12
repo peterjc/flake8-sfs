@@ -7,7 +7,7 @@ import ast
 
 from flake8 import utils as stdin_utils
 
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 plugin_prefix = "SFS"
 
@@ -37,6 +37,7 @@ class StringFormatStyleChecker:
         percent_bytes = set()
         percent_strings = set()
         format_method = set()
+        str_format = set()
         f_strings = set()
 
         for node in ast.walk(tree):
@@ -55,12 +56,20 @@ class StringFormatStyleChecker:
                 elif isinstance(node.left, ast.Bytes):
                     percent_bytes.add((node.lineno, node.col_offset))
             elif (
-                isinstance(node, ast.Attribute)
-                and node.attr == "format"
-                and isinstance(node.value, ast.Str)
+                isinstance(node, ast.Call)
+                and isinstance(node.func, ast.Attribute)
+                and node.func.attr == "format"
             ):
-                # String with a .format attribute...
-                format_method.add((node.lineno, node.col_offset))
+                if isinstance(node.func.value, ast.Str):
+                    # String with a .format attribute...
+                    format_method.add((node.lineno, node.col_offset))
+                elif (
+                    isinstance(node.func.value, ast.Name)
+                    and node.func.value.id == "str"
+                    and isinstance(node.args[0], ast.Str)
+                ):
+                    # str.format("...", ...)
+                    str_format.add((node.lineno, node.col_offset))
 
         # Avoid duplicate messages
         for msg_str, msg_values in (
@@ -68,6 +77,7 @@ class StringFormatStyleChecker:
             ("101 String literal formatting using percent operator.", percent_strings),
             ("102 String literal formatting using format method.", format_method),
             ("103 String literal formatting using f-string.", f_strings),
+            ("104 String formatting with str.format('...', ...) directly.", str_format),
         ):
             for line, col in sorted(msg_values):
                 yield (line, col, plugin_prefix + msg_str, type(self))

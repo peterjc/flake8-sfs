@@ -23,6 +23,7 @@ setup(
     author_email="p.j.a.cock@googlemail.com",
     url="https://github.com/peterjc/flake8-sfs",
     classifiers=[
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "Framework :: Flake8",
         "Programming Language :: Python",

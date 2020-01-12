@@ -29,6 +29,8 @@ ways to do string formatting. The three main ones are:
 
 * Percent operator (violation codes ``SFS1##``), as in this example:
 
+.. code :: pycon
+
     >>> name = "Peter"
     >>> price = 1.2
     >>> print("Hello %s, do you have $%0.2f?" % (name, price))
@@ -36,12 +38,16 @@ ways to do string formatting. The three main ones are:
 
 * Format method (violation codes ``SFS2##``), available since Python 2.6,
 
+.. code :: pycon
+
     >>> name = "Peter"
     >>> price = 1.2
     >>> print("Hello {}, do you have ${:0.2f}?".format(name, price))
     Hello Peter, do you have $1.20?
 
 * f-strings (violation codes ``SFS3##``), available since Python 3.6,
+
+.. code :: pycon
 
     >>> name = "Peter"
     >>> price = 1.2
@@ -188,10 +194,3 @@ To make a new release once tested locally and on TravisCI::
 The PyPI upload should trigger an automated pull request updating the
 `flake8-sfs conda-forge recipe
 <https://github.com/conda-forge/flake8-sfs-feedstock/blob/master/recipe/meta.yaml>`_.
-
-
-TODO
-----
-
-- Can/should we spot byte formatting?
-- Can we spot pointless f-strings? See flake8-pie's PIE782 code.

@@ -52,19 +52,8 @@ We are spoilt for choice, but quoting the `Zen of Python
 preferably only one - obvious way to do it*. This flake8 plugin exists to let
 you define which of these styles your project allows.
 
-For example, if you accept that f-strings are best, you could run a tool like
-`flynt <https://github.com/ikamensh/flynt>`_ to automatically convert all your
-code - and then use this flake8 plugin to enforce the style.
-
-Alternatively, you might have a large legacy codebase with lots of the percent
-formatting - yet want to gradually move to f-strings. Here you could use this
-plugin to enforce a rule allowing those but rejecting the string format method.
-
-Or you might say the old ways are the best, and configure flake8 to ignore the
-percent formatting but treat either the format method or f-strings as errors.
-
 By default this plugin complains about all three styles - we expect you to make
-an explicit choice and configure which codes to ignore.
+an explicit choice and configure which codes to ignore. See uses cases below.
 
 Flake8 Validation codes
 -----------------------
@@ -103,6 +92,27 @@ SFS301 String literal formatting using f-string.
 You can use a partial code like ``SFS1`` in flake8 to ignore all the ``SFS1##``
 percent formatting codes.
 
+Use cases
+=========
+
+If you accept that f-strings are best, you could run a tool like `flynt
+<https://github.com/ikamensh/flynt>`_ to automatically convert all your code -
+and then use this flake8 plugin to enforce the style by configuring it to
+ignoring the ``SFS3`` prefix.
+
+You might be maintaining a project which still supports Python 2, where you
+have a mix of percent and format string formatting. Here tell flake8 to ignore
+the ``SFS1`` and ``SFS2`` prefixes, and complain only about f-strings which
+would be a syntax error on Python 2 (i.e. enforce only prefix ``SFS3``).
+
+Alternatively, you might have a large legacy codebase with lots of the percent
+formatting - yet want to move any format methods to f-strings. Here you could
+ignore the ``SFS1`` and ``SFS3`` prefixes and enforce only the format method
+checks (``SFS2`` prefix).
+
+Or you might say the old ways are the best, and configure flake8 to ignore the
+percent formatting but treat either the format method or f-strings as errors
+(by ignoring the ``SFS1`` prefix).
 
 Installation and usage
 ----------------------
@@ -129,9 +139,8 @@ You can request only the ``SFS`` codes be shown using::
 
     $ flake8 --select SFS example.py
 
-Similarly you might add particular SFS validation codes to your flake8
-configuration file's select or ignore list.
-
+You should add at least some SFS validation codes to your flake8 configuration
+file's select or ignore list.
 
 Configuration
 -------------
@@ -146,7 +155,7 @@ For example::
     [flake8]
     extend-ignore =
         # Ignore f-strings, we like them:
-        SFS103,
+        SFS3,
 
 Note that flake8 allows splitting comma separated lists over multiple lines,
 and allows including of hash comment lines.

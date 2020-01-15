@@ -162,7 +162,7 @@ For example::
     [flake8]
     extend-ignore =
         # Ignore f-strings, we like them:
-        SFS3,
+        SFS301,
 
 Note that flake8 allows splitting comma separated lists over multiple lines,
 and allows including of hash comment lines.

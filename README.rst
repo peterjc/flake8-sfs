@@ -104,12 +104,12 @@ Use cases
 If you accept that f-strings are best, you could run a tool like `flynt
 <https://github.com/ikamensh/flynt>`_ to automatically convert all your code -
 and then use this flake8 plugin to enforce the style by configuring it to
-ignoring the ``SFS3`` prefix.
+ignore the ``SFS301`` violation.
 
 You might be maintaining a project which still supports Python 2, where you
-have a mix of percent and format string formatting. Here tell flake8 to ignore
-the ``SFS1`` and ``SFS2`` prefixes, and complain only about f-strings which
-would be a syntax error on Python 2 (i.e. enforce only prefix ``SFS3``).
+have a mix of percent and format method string formatting. Here tell flake8 to
+ignore the ``SFS1`` and ``SFS2`` prefixes, and complain only about f-strings
+which would be a syntax error on Python 2 (i.e. enforce only prefix ``SFS3``).
 
 Alternatively, you might have a large legacy codebase with lots of the percent
 formatting - yet want to move any format methods to f-strings. Here you could

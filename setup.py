@@ -22,6 +22,11 @@ setup(
     author="Peter J. A. Cock",
     author_email="p.j.a.cock@googlemail.com",
     url="https://github.com/peterjc/flake8-sfs",
+    project_urls={
+        "Documentation": "https://github.com/peterjc/flake8-sfs/blob/master/README.rst",
+        "Source": "https://github.com/peterjc/flake8-sfs/",
+        "Tracker": "https://github.com/peterjc/flake8-sfs/issues",
+    },
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",

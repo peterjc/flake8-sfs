@@ -123,7 +123,7 @@ percent formatting but treat either the format method or f-strings as errors
 Installation and usage
 ----------------------
 
-Python 3.6 or later is required (as we need to parse the Python syntax which
+Python 3.6 or later is required (as we need this to parse Python syntax which
 may include f-strings), but flake8 and this plugin can still be used on code
 intended support older versions of Python.
 

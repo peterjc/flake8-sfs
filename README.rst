@@ -24,8 +24,8 @@ This is an MIT licensed flake8 plugin for enforcing a Python string formatting
 preference. It is available to install from the `Python Package Index (PyPI)
 <https://pypi.org/project/flake8-sfs/>`_.
 
-For historical reasons, the Python programming language has accumlated multiple
-ways to do string formatting. The three main ones are:
+For historical reasons, the Python programming language has accumulated
+multiple ways to do string formatting. The three main ones are:
 
 * Percent operator (violation codes ``SFS1##``), as in this example:
 

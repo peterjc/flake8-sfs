@@ -175,7 +175,7 @@ Version History
 Version Released   Changes
 ------- ---------- -----------------------------------------------------------
 v0.0.3  2020-01-22 - Updates to documentation and PyPI metadata.
-v0.0.2  2020-01-12 - Codes now have a heirachy (so can ignore whole groups).
+v0.0.2  2020-01-12 - Codes now have a hierarchy (so can ignore whole groups).
                    - Added ``str.format("...", ...)`` check.
 v0.0.1  2020-01-11 - Initial public release (initial codes later reallocated).
 ======= ========== ===========================================================

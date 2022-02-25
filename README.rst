@@ -10,9 +10,9 @@ flake8-sfs - Python String Formatting Style Plugin
 .. image:: https://results.pre-commit.ci/badge/github/peterjc/flake8-sfs/master.svg
    :target: https://results.pre-commit.ci/latest/github/peterjc/flake8-sfs/master
    :alt: pre-commit.ci status
-.. image:: https://img.shields.io/travis/peterjc/flake8-sfs/master.svg
-   :alt: Testing with TravisCI
-   :target: https://travis-ci.org/peterjc/flake8-sfs/branches
+.. image:: https://img.shields.io/github/workflow/status/peterjc/flake8-sfs/test?logo=github-actions
+   :alt: GitHub workflow status
+   :target: https://github.com/peterjc/flake8-sfs/actions
 .. image:: https://img.shields.io/pypi/dm/flake8-sfs.svg
    :alt: PyPI downloads
    :target: https://pypistats.org/packages/flake8-sfs
@@ -189,7 +189,7 @@ Developers
 
 This plugin is on GitHub at https://github.com/peterjc/flake8-sfs
 
-To make a new release once tested locally and on TravisCI::
+To make a new release once tested locally and online::
 
     $ git tag vX.Y.Z
     $ python setup.py sdist --formats=gztar

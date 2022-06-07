@@ -40,7 +40,7 @@ setup(
     ],
     keywords="strings, formatting, style, f-string",
     py_modules=["flake8_sfs"],
-    python_requires=">=3.6",
+    python_requires=">=3.7",
     install_requires=["flake8 >= 3.0.0"],
     entry_points={"flake8.extension": ["SFS = flake8_sfs:StringFormatStyleChecker"]},
 )

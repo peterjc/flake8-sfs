@@ -177,6 +177,7 @@ Version History
 ======= ========== ===========================================================
 Version Released   Changes
 ------- ---------- -----------------------------------------------------------
+v0.0.4  *Pending*  - Require at least Python 3.7.
 v0.0.3  2020-01-22 - Updates to documentation and PyPI metadata.
 v0.0.2  2020-01-12 - Codes now have a hierarchy (so can ignore whole groups).
                    - Added ``str.format("...", ...)`` check.

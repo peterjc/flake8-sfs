@@ -1,7 +1,5 @@
 """Setup file for building/installing flake8-sfs."""
 
-from __future__ import with_statement
-
 from setuptools import setup
 
 

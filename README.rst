@@ -193,8 +193,8 @@ This plugin is on GitHub at https://github.com/peterjc/flake8-sfs
 To make a new release once tested locally and online::
 
     $ git tag vX.Y.Z
-    $ python setup.py sdist --formats=gztar
-    $ twine upload dist/flake8-sfs-X.Y.Z.tar.gz
+    $ python setup.py sdist --formats=gztar && python setup.py bdist_wheel
+    $ twine upload dist/flake8?sfs-X.Y.Z*
     $ git push origin master --tags
 
 The PyPI upload should trigger an automated pull request updating the

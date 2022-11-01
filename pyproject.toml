@@ -31,6 +31,8 @@ dependencies = ['flake8>=3']
 dynamic = ['version']
 [project.entry-points]
 'flake8.extension' = {SFS = 'flake8_sfs:StringFormatStyleChecker'}
+[project.optional-dependencies]
+develop = ['build', 'twine']
 [project.urls]
 Homepage = 'https://github.com/peterjc/flake8-sfs'
 'Source Code' = 'https://github.com/peterjc/flake8-sfs/'

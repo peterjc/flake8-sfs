@@ -126,9 +126,7 @@ percent formatting but treat either the format method or f-strings as errors
 Installation and usage
 ----------------------
 
-Python 3.6 or later is required (as we need this to parse Python syntax which
-may include f-strings), but flake8 and this plugin can still be used on code
-intended support older versions of Python.
+Python 3.7 or later is required.
 
 We recommend installing the plugin using pip, which handles the dependencies::
 
@@ -182,7 +180,10 @@ Version History
 ======= ========== ===========================================================
 Version Released   Changes
 ------- ---------- -----------------------------------------------------------
-v0.0.4  *Pending*  - Require at least Python 3.7.
+v0.0.4  2022-11-01 - Requires at least Python 3.7.
+                   - Replaces ``setup.py`` with ``pyproject.toml``
+                     (contribution from
+                     `Sergey B Kirpichev <https://github.com/skirpichev>`_).
 v0.0.3  2020-01-22 - Updates to documentation and PyPI metadata.
 v0.0.2  2020-01-12 - Codes now have a hierarchy (so can ignore whole groups).
                    - Added ``str.format("...", ...)`` check.

@@ -199,7 +199,7 @@ To make a new release once tested locally and online::
 
     $ git tag vX.Y.Z
     $ python -m build
-    $ twine upload dist/flake8-sfs-X.Y.Z.tar.gz
+    $ twine upload dist/flake8?sfs-X.Y.Z*
     $ git push origin master --tags
 
 The PyPI upload should trigger an automated pull request updating the

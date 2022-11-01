@@ -1,0 +1,46 @@
+[build-system]
+requires = ['pip>=20.3', 'setuptools>=61', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'flake8-sfs'
+description = 'Python String Formatting Style (SFS) plugin for flake8'
+keywords = ['strings', 'formatting', 'style', 'f-string']
+license = {text = 'MIT'}
+readme = 'README.rst'
+authors = [
+  {name = 'Peter J. A. Cock'}
+]
+maintainers = [
+  {name = 'Peter J. A. Cock', email = 'p.j.a.cock@googlemail.com'}
+]
+classifiers = [
+  'Development Status :: 4 - Beta',
+  'Intended Audience :: Developers',
+  'Framework :: Flake8',
+  'License :: OSI Approved :: MIT License',
+  'Operating System :: OS Independent',
+  'Programming Language :: Python',
+  'Topic :: Software Development :: Libraries :: Python Modules',
+  'Topic :: Software Development :: Libraries :: Quality Assurance',
+  'Programming Language :: Python :: 3',
+  'Programming Language :: Python :: 3 :: Only'
+]
+requires-python = '>=3.7'
+dependencies = ['flake8>=3']
+dynamic = ['version']
+[project.entry-points]
+'flake8.extension' = {SFS = 'flake8_sfs:StringFormatStyleChecker'}
+[project.optional-dependencies]
+develop = ['build', 'twine']
+[project.urls]
+Homepage = 'https://github.com/peterjc/flake8-sfs'
+'Source Code' = 'https://github.com/peterjc/flake8-sfs/'
+'Bug Tracker' = 'https://github.com/peterjc/flake8-sfs/issues'
+Documentation = 'https://github.com/peterjc/flake8-sfs/blob/master/README.rst'
+
+[tool.setuptools]
+py-modules = ['flake8_sfs']
+zip-safe = true
+[tool.setuptools.dynamic]
+version = {attr = 'flake8_sfs.__version__'}

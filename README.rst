@@ -200,8 +200,8 @@ To make a new release once tested locally and online::
 
     $ git tag vX.Y.Z
     $ python -m build
-    $ twine upload dist/flake8?sfs-X.Y.Z*
     $ git push origin master --tags
+    $ twine upload dist/flake8?sfs-X.Y.Z*
 
 The PyPI upload should trigger an automated pull request updating the
 `flake8-sfs conda-forge recipe

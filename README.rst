@@ -132,11 +132,6 @@ We recommend installing the plugin using pip, which handles the dependencies::
 
     $ pip install flake8-sfs
 
-Developers may install the plugin from the git repository with optional
-dependencies::
-
-    $ pip install -e .[develop]
-
 Alternatively, if you are using the Anaconda packaging system, the following
 command will install the plugin with its dependencies::
 
@@ -195,6 +190,11 @@ Developers
 ----------
 
 This plugin is on GitHub at https://github.com/peterjc/flake8-sfs
+
+Developers may install the plugin from the git repository with optional build
+dependencies::
+
+    $ pip install -e .[develop]
 
 To make a new release once tested locally and online::
 

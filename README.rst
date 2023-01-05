@@ -10,7 +10,7 @@ flake8-sfs - Python String Formatting Style Plugin
 .. image:: https://results.pre-commit.ci/badge/github/peterjc/flake8-sfs/master.svg
    :target: https://results.pre-commit.ci/latest/github/peterjc/flake8-sfs/master
    :alt: pre-commit.ci status
-.. image:: https://img.shields.io/github/workflow/status/peterjc/flake8-sfs/test?logo=github-actions
+.. image:: https://img.shields.io/github/actions/workflow/status/peterjc/flake8-sfs/test.yml?logo=github-actions
    :alt: GitHub workflow status
    :target: https://github.com/peterjc/flake8-sfs/actions
 .. image:: https://img.shields.io/pypi/dm/flake8-sfs.svg

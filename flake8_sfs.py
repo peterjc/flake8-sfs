@@ -7,7 +7,7 @@ import ast
 
 from flake8 import utils as stdin_utils
 
-__version__ = "0.0.4"
+__version__ = "1.0.0"
 
 plugin_prefix = "SFS"
 

@@ -105,7 +105,8 @@ Use cases
 =========
 
 If you accept that f-strings are best, you could run a tool like `flynt
-<https://github.com/ikamensh/flynt>`_ to automatically convert all your code -
+<https://github.com/ikamensh/flynt>`__ or `pyupgrade
+<https://github.com/asottile/pyupgrade>`__ to automatically convert your code,
 and then use this flake8 plugin to enforce the style by configuring it to
 ignore the ``SFS301`` violation.
 

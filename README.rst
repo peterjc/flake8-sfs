@@ -176,8 +176,8 @@ Version History
 ======= ========== ===========================================================
 Version Released   Changes
 ------- ---------- -----------------------------------------------------------
-v1.0.1  2025-02-03 - Requires at least Python 3.8 (no code changes).
-v1.0.0  2023-11-01 - Calling this version 1.0.0 as has been stable for years.
+v1.0.1  *Pending* - Requires at least Python 3.8 (no code changes).
+v1.0.0  023-11-01 - Calling this version 1.0.0 as has been stable for years.
                    - Updates to documentation and PyPI metadata.
 v0.0.4  2022-11-01 - Requires at least Python 3.7.
                    - Replaces ``setup.py`` with ``pyproject.toml``

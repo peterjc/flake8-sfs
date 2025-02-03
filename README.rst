@@ -127,7 +127,7 @@ percent formatting but treat either the format method or f-strings as errors
 Installation and usage
 ----------------------
 
-Python 3.7 or later is required.
+Python 3.8 or later is required.
 
 We recommend installing the plugin using pip, which handles the dependencies::
 

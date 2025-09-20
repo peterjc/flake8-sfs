@@ -47,26 +47,30 @@ class StringFormatStyleChecker:
                     f_strings.add((node.lineno, node.col_offset))
             elif isinstance(node, ast.BinOp) and isinstance(node.op, ast.Mod):
                 # Percent operator - could be string formatting
-                if isinstance(node.left, ast.Num):
-                    # Numerical modulo
-                    continue
-                elif isinstance(node.left, ast.Str):
-                    # String!
-                    percent_strings.add((node.lineno, node.col_offset))
-                elif isinstance(node.left, ast.Bytes):
-                    percent_bytes.add((node.lineno, node.col_offset))
+                if isinstance(node.left, ast.Constant):
+                    node_left_value = node.left.value
+                    if isinstance(node_left_value, str):
+                        # String!
+                        percent_strings.add((node.lineno, node.col_offset))
+                    elif isinstance(node_left_value, bytes):
+                        percent_bytes.add((node.lineno, node.col_offset))
+                    else:
+                        continue
             elif (
                 isinstance(node, ast.Call)
                 and isinstance(node.func, ast.Attribute)
                 and node.func.attr == "format"
             ):
-                if isinstance(node.func.value, ast.Str):
+                if isinstance(node.func.value, ast.Constant) and isinstance(
+                    node.func.value.value, str
+                ):
                     # String with a .format attribute...
                     format_method.add((node.lineno, node.col_offset))
                 elif (
                     isinstance(node.func.value, ast.Name)
                     and node.func.value.id == "str"
-                    and isinstance(node.args[0], ast.Str)
+                    and isinstance(node.args[0], ast.Constant)
+                    and isinstance(node.args[0].value, str)
                 ):
                     # str.format("...", ...)
                     str_format.add((node.lineno, node.col_offset))

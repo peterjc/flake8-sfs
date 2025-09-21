@@ -176,7 +176,7 @@ Version History
 ======= ========== ===========================================================
 Version Released   Changes
 ------- ---------- -----------------------------------------------------------
-v1.0.1  *Pending*  - Requires at least Python 3.9.
+v1.0.1  2025-09-21 - Requires at least Python 3.9.
                    - Add support for Python 3.14.
 v1.0.0  2023-11-01 - Calling this version 1.0.0 as has been stable for years.
                    - Updates to documentation and PyPI metadata.
